@@ -18,6 +18,8 @@
 	<link href="../assets/plugins/gritter/css/jquery.gritter.css" rel="stylesheet" />
 	<link href="../assets/plugins/morris.js/morris.css" rel="stylesheet" />
 	<link href="../assets/plugins/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" />
+  	<link href="../assets/plugins/flag-icon-css/css/flag-icon.min.css" rel="stylesheet" />	
+	<link href="../assets/plugins/switchery/switchery.min.css" rel="stylesheet" />
 	<!-- ================== END PAGE LEVEL STYLE ================== -->
 </head>
 <body>
@@ -99,12 +101,12 @@
 			</div>
 			<!-- end navbar-collapse -->
 			
-			<!-- begin header-nav -->
+			<!-- end navbar-header --><!-- begin header-nav -->
 			<ul class="navbar-nav d-flex flex-grow-1">
 				<li class="navbar-form flex-grow-1">
 					<form action="" method="POST" name="search">
 						<div class="form-group">
-							<input type="text" class="form-control" placeholder='Try searching "Bettery monitor"' />
+							<input type="text" class="form-control" placeholder='Try searching "Users Today"' />
 							<button type="submit" class="btn btn-search"><i class="fa fa-search"></i></button>
 						</div>
 					</form>
@@ -127,28 +129,6 @@
 						</a>
 						<a href="javascript:;" class="dropdown-item media">
 							<div class="media-left">
-								<img src="../assets/img/user/user-1.jpg" class="media-object" alt="" />
-								<i class="fab fa-facebook-messenger text-blue media-object-icon"></i>
-							</div>
-							<div class="media-body">
-								<h6 class="media-heading">John Smith</h6>
-								<p>Quisque pulvinar tellus sit amet sem scelerisque tincidunt.</p>
-								<div class="text-muted f-s-12">25 minutes ago</div>
-							</div>
-						</a>
-						<a href="javascript:;" class="dropdown-item media">
-							<div class="media-left">
-								<img src="../assets/img/user/user-2.jpg" class="media-object" alt="" />
-								<i class="fab fa-facebook-messenger text-blue media-object-icon"></i>
-							</div>
-							<div class="media-body">
-								<h6 class="media-heading">Olivia</h6>
-								<p>Quisque pulvinar tellus sit amet sem scelerisque tincidunt.</p>
-								<div class="text-muted f-s-12">35 minutes ago</div>
-							</div>
-						</a>
-						<a href="javascript:;" class="dropdown-item media">
-							<div class="media-left">
 								<i class="fa fa-plus media-object bg-silver-darker"></i>
 							</div>
 							<div class="media-body">
@@ -159,10 +139,9 @@
 						<a href="javascript:;" class="dropdown-item media">
 							<div class="media-left">
 								<i class="fa fa-envelope media-object bg-silver-darker"></i>
-								<i class="fab fa-google text-warning media-object-icon f-s-14"></i>
 							</div>
 							<div class="media-body">
-								<h6 class="media-heading"> New Email From John</h6>
+								<h6 class="media-heading">BMV-702 Warning<i class="fa fa-exclamation-circle text-danger"></i></h6>
 								<div class="text-muted f-s-12">2 hour ago</div>
 							</div>
 						</a>
@@ -171,10 +150,20 @@
 						</div>
 					</div>
 				</li>
+				<li class="dropdown navbar-language">
+					<a href="#" class="dropdown-toggle pr-1 pl-1 pr-sm-3 pl-sm-3" data-toggle="dropdown">
+						<span class="flag-icon flag-icon-us" title="us"></span>
+						<span class="name d-none d-sm-inline">EN</span> <b class="caret"></b>
+					</a>
+					<div class="dropdown-menu">
+						<a href="javascript:;" class="dropdown-item"><span class="flag-icon flag-icon-us" title="us"></span> English</a>
+						<a href="javascript:;" class="dropdown-item"><span class="flag-icon flag-icon-cn" title="cn"></span> Chinese</a>
+					</div>
+				</li>
 				<li class="dropdown navbar-user">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 						<img src="../assets/img/user/user-13.jpg" alt="" /> 
-						<span class="d-none d-md-inline">Adam Schwartz</span> <b class="caret"></b>
+						<span class="d-none d-md-inline">Admin</span> <b class="caret"></b>
 					</a>
 					<div class="dropdown-menu dropdown-menu-right">
 						<a href="javascript:;" class="dropdown-item">Edit Profile</a>
@@ -301,7 +290,7 @@
 												<tbody>
 													<tr>
 														<td>Status</td>
-														<td><a href="#modal-dialog" class="btn btn-sm btn-success" data-toggle="modal">Open</a></td>
+														<td class="text-silver-lighter"><a class="btn btn-sm btn-indigo">Open</a></td>
 													</tr>
 												</tbody>
 											</table>
@@ -310,46 +299,90 @@
 									<!-- end panel -->
 								</div>
 								<!-- end col-6 -->
-								
 							</div>
 							<!-- end row -->
 						</div>
 						<div class="tab-pane fade" id="card-pill-2">
 							<!-- begin panel -->
-							<div class="panel panel-inverse" data-sortable-id="flot-chart-4">
+							<div class="panel" data-sortable-id="flot-chart-4">
+								<div class="panel-body">
+									<!-- begin row -->
+									<div class="row">
+										<!-- begin col-6 -->
+										<div class="col-xl-6">
+											<!-- begin daterange-filter -->
+											<div class="d-sm-flex align-items-center mb-3">
+												<a href="#" class="btn btn-primary mr-2 text-truncate" id="daterange-filter">
+													<i class="fa fa-calendar fa-fw text-white-transparent-5 ml-n1"></i> 
+													<span>1 Jun 2020 - 7 Jun 2020</span>
+													<b class="caret"></b>
+												</a>
+												<div class="text-muted f-w-600 mt-2 mt-sm-0">存储了 <span id="daterange-prev-date">24 Mar-30 Apr 2020</span> 的数据</div>
+											</div>
+											<!-- end daterange-filter -->
+										</div>
+										<!-- end col-6 -->
+										<!-- begin col-6 -->
+										<div class="col-xl-6">
+											<div class="btn-group pull-left">
+												<a href="#" class="btn btn-primary">Parameter</a>
+												<a href="#" class="btn btn-primary dropdown-toggle"data-toggle="dropdown"><b class="caret"></b></a>
+												<ul class="dropdown-menu pull-right">
+													<a href="javascript:;" class="dropdown-item">Voltage</a>
+													<a href="javascript:;" class="dropdown-item">Current</a>
+													<a href="javascript:;" class="dropdown-item">Power</a>
+													<div class="dropdown-divider"></div>
+													<a href="javascript:;" class="dropdown-item">Warning</a>
+												</ul>
+											</div>
+										</div>
+										<!-- end col-6 -->
+									</div>
+									<!-- end row -->
+
+								</div>
+							</div>
+							<!-- end panel -->
+							<div class="panel" data-sortable-id="flot-chart-4">
 								<div class="panel-body">
 									<!-- begin daterange-filter -->
 									<div class="d-sm-flex align-items-center mb-3">
-										<a href="#" class="btn btn-inverse mr-2 text-truncate" id="daterange-filter">
-											<i class="fa fa-calendar fa-fw text-white-transparent-5 ml-n1"></i> 
-											<span>1 Jun 2020 - 7 Jun 2020</span>
-											<b class="caret"></b>
-										</a>
-										<div class="text-muted f-w-600 mt-2 mt-sm-0">存储了 <span id="daterange-prev-date">24 Mar-30 Apr 2020</span> 的数据</div>
-									</div>
+										<div id="history" style="width: 60rem;height:20rem;margin:0 auto;"></div>									</div>
 									<!-- end daterange-filter -->
-									<div id="live-updated-chart"></div>
 								</div>
 							</div>
 							<!-- end panel -->
 						</div>
 						<div class="tab-pane fade" id="card-pill-3">
 							<!-- begin panel -->
-							<div class="panel panel-inverse" data-sortable-id="flot-chart-4">
-								<div class="panel-heading">
-									<h4 class="panel-title">Flot Live Updated Chart</h4>
-									<div class="panel-heading-btn">
-										<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
-										<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-redo"></i></a>
-										<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
-										<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
-									</div>
-								</div>
+							<div class="panel" data-sortable-id="flot-chart-4">
 								<div class="panel-body">
-									<p>
-										You can <code>update</code> a chart periodically to get a real-time effect by using a timer to insert the new data in the plot and redraw it.
-									</p>
-									<div id="live-updated-chart" class="height-sm"></div>
+									<!-- begin row -->
+									<div class="row">
+										<!-- begin col-6 -->
+										<div class="col-xl-6">
+											<div class="btn-group pull-left">
+												<a href="#" class="btn btn-primary">Parameter</a>
+												<a href="#" class="btn btn-primary dropdown-toggle"data-toggle="dropdown"><b class="caret"></b></a>
+												<ul class="dropdown-menu pull-right">
+													<a href="javascript:;" class="dropdown-item">Voltage</a>
+													<a href="javascript:;" class="dropdown-item">Current</a>
+													<a href="javascript:;" class="dropdown-item">Power</a>
+													<div class="dropdown-divider"></div>
+													<a href="javascript:;" class="dropdown-item">Warning</a>
+												</ul>
+											</div>
+										</div>
+										<!-- end col-6 -->
+									</div>
+									<!-- end row -->
+								</div>
+							</div>
+							<!-- end panel -->
+							<!-- begin panel -->
+							<div class="panel">
+								<div class="panel-body">
+									<div id="RealTime" style="width: 60rem;height:20rem;margin:0 auto;"></div>
 								</div>
 							</div>
 							<!-- end panel -->
@@ -374,8 +407,148 @@
 								<!-- begin col-6 -->
 								<div class="col-xl-6">
 									<!-- begin panel -->
-									<div class="panel" style="height:450px">
+									<div class="panel">
 										<div class="panel-body text-left">
+											<table class="table f-s-18">
+												<thead>
+													<tr>
+														<th class="text-red-darker">Battery Configuration</th>
+														<th></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>battery capacity</td>
+														<td class="text-right"><a href="#modal-dialog" class="btn btn-sm btn-success" data-toggle="modal">200Ah</a></td>													
+													<tr>
+														<td>Charged voltage</td>
+														<td class="text-right"><a href="#modal-dialog" class="btn btn-sm btn-success" data-toggle="modal">13.5</a></td>													<tr>
+													</tr>
+													<tr>
+														<td>Discharge standard</td>
+														<td class="text-right"><a href="#modal-dialog" class="btn btn-sm btn-success" data-toggle="modal">50%</a></td>													<tr>
+													</tr>
+													<tr>
+														<td>Tail current</td>
+														<td class="text-right"><a href="#modal-dialog" class="btn btn-sm btn-success" data-toggle="modal">4.00%</a></td>	
+													</tr>
+													<tr>
+														<td>Peukert factor</td>
+														<td class="text-right"><a href="#modal-dialog" class="btn btn-sm btn-success" data-toggle="modal">1.25</a></td>	
+													</tr>
+													<tr>
+														<td>Available average time</td>
+														<td class="text-right"><a href="#modal-dialog" class="btn btn-sm btn-success" data-toggle="modal">3m</a></td>	
+													</tr>
+													<tr>
+														<td>Current threshold</td>
+														<td class="text-right"><a href="#modal-dialog" class="btn btn-sm btn-success" data-toggle="modal">0.10A</a></td>	
+													</tr>
+												</tbody>
+											</table>
+											<table class="table f-s-18">
+												<thead>
+													<tr>
+														<th></th>
+														<th></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Battery start synchronization</td>
+														<td class="text-right"><input type="checkbox" data-render="switchery" data-theme="default" checked /></td>
+													</tr>
+													<tr>
+														<td>Charging Status</td>
+														<td class="text-right"><a href="#modal-dialog" class="btn btn-sm btn-success" data-toggle="modal">85%</a></td>
+													</tr>
+													<tr>
+														<td>Synchronize soc to 100%</td>
+														<td class="text-right"><a href="#modal-dialog" class="btn btn-sm btn-indigo" data-toggle="modal">Synchronize</a></td>
+													</tr>
+													<tr>
+														<td>Zero current calibration</td>
+														<td class="text-right"><a href="#modal-dialog" class="btn btn-sm btn-indigo" data-toggle="modal">Synchronize</a></td>
+													</tr>
+												</tbody>
+											</table>
+											<!-- #modal-content -->
+											<div class="modal fade" id="modal-dialog">
+												<div class="modal-dialog">
+													<div class="modal-content">
+														<div class="modal-header">
+															<h4 class="modal-title">Modal Dialog</h4>
+															<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+														</div>
+														<div class="modal-body">
+															<p>
+																Modal body content here...
+															</p>
+														</div>
+														<div class="modal-footer">
+															<a href="javascript:;" class="btn btn-white" data-dismiss="modal">Close</a>
+															<a href="javascript:;" class="btn btn-success">Action</a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- #modal-without-animation -->
+											<div class="modal" id="modal-without-animation">
+												<div class="modal-dialog">
+													<div class="modal-content">
+														<div class="modal-header">
+															<h4 class="modal-title">Modal Without Animation</h4>
+															<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+														</div>
+														<div class="modal-body">
+															Modal body content here...
+														</div>
+														<div class="modal-footer">
+															<a href="javascript:;" class="btn btn-white" data-dismiss="modal">Close</a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- #modal-message -->
+											<div class="modal modal-message fade" id="modal-message">
+												<div class="modal-dialog">
+													<div class="modal-content">
+														<div class="modal-header">
+															<h4 class="modal-title">Modal Message Header</h4>
+															<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+														</div>
+														<div class="modal-body">
+															<p>Text in a modal</p>
+															<p>Do you want to turn on location services so GPS can use your location ?</p>
+														</div>
+														<div class="modal-footer">
+															<a href="javascript:;" class="btn btn-white" data-dismiss="modal">Close</a>
+															<a href="javascript:;" class="btn btn-primary">Save Changes</a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- #modal-alert -->
+											<div class="modal fade" id="modal-alert">
+												<div class="modal-dialog">
+													<div class="modal-content">
+														<div class="modal-header">
+															<h4 class="modal-title">Alert Header</h4>
+															<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+														</div>
+														<div class="modal-body">
+															<div class="alert alert-danger m-b-0">
+																<h5><i class="fa fa-info-circle"></i> Alert Header</h5>
+																<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+															</div>
+														</div>
+														<div class="modal-footer">
+															<a href="javascript:;" class="btn btn-white" data-dismiss="modal">Close</a>
+															<a href="javascript:;" class="btn btn-danger" data-dismiss="modal">Action</a>
+														</div>
+													</div>
+												</div>
+											</div>
 										</div>
 									</div>
 									<!-- end panel -->
@@ -402,6 +575,7 @@
 	<!-- ================== BEGIN BASE JS ================== -->
 	<script src="../assets/js/app.min.js"></script>
 	<script src="../assets/js/theme/google.min.js"></script>
+	<script src="../js/echarts.js"></script>
 	<!-- ================== END BASE JS ================== -->
 	
 	<!-- ================== BEGIN PAGE LEVEL JS ================== -->
@@ -416,6 +590,172 @@
 	<script src="../assets/js/demo/chart-flot.demo.js"></script>
 	<script src="../assets/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
 	<script src="../assets/plugins/moment/min/moment.min.js"></script>
+	<!-- ================== Notifications ================== -->
+	<script src="../assets/plugins/gritter/js/jquery.gritter.js"></script>
+	<script src="../assets/plugins/sweetalert/dist/sweetalert.min.js"></script>
+	<!-- ================== Switch ================== -->	
+	<script src="../assets/plugins/switchery/switchery.min.js"></script>
+	<script src="../assets/plugins/abpetkov-powerange/dist/powerange.min.js"></script>
+	<script src="../assets/js/demo/form-slider-switcher.demo.js"></script>
+	<script>
+		var dom = document.getElementById("history");
+		var HistoryChart = echarts.init(dom);
+		window.onresize = HistoryChart.resize;  // 适应屏幕放大缩小
+
+		option = {
+			title: {  //标题的样式
+				text: '历史数据图',
+				itemGap: 30,
+				textStyle: {
+					color: '#4285f4',
+					fontFamily: '微软雅黑',
+				}
+			},
+			toolbox : {
+				show : true,
+				confine:true,
+				feature : {
+					mark : {
+						show : true
+					},
+					dataView : {
+						show : true,
+						readOnly : false
+					},
+					magicType : {
+						show : true,
+						type : ['pie', 'funnel']
+					},
+					restore : {
+						show : true
+					},
+					saveAsImage : {
+						show : true
+					}
+				}
+			},
+			tooltip: {//鼠标移动上去之后显示的样式（提示语）
+				show: true,
+				// position: ['20%', '50%'],
+				confine:true,    //在移动端，提示框中的内容如果长了就会移动到窗口外，所以该参数是限制提示框始终在窗口内
+				
+				//formatter: "{a} <br/>{b} : {c} ({d}%)",//这个是提示框上的文字，如果不写，也能出来，但是写了就得自己定义显示的内容
+			},
+			legend: {  //它是图形最顶层的三个小方块每一个颜色所代表的东西
+				// x : '66%',
+				// y : '15%',
+				data: ['data1','data2']  //数据，dataname=['练习量','占用率']，数组形式
+			},
+			xAxis: {
+				type: 'category',
+				boundaryGap: false,
+				data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+			},
+			yAxis: {
+				type: 'value'
+			},
+			grid: {
+				left: '2%',
+				right: '4%',
+				bottom: '14%',
+				top: '16%',
+				containLabel: true
+			},
+			series: [{
+				center: ['50%', '60%'],
+				clockWise: false,
+				radius: ['65%', '80%'],
+				data: [820, 932, 901, 934, 1290, 1330, 1320],
+				type: 'line',
+				smooth: true, //曲线变平滑的
+				areaStyle: {
+					normal: {
+						color: '#4285f4' //改变区域颜色
+					}
+				},
+			}]
+		};
+		HistoryChart.setOption(option, true);
+	</script>
+	<script>
+		var dom = document.getElementById("RealTime");
+		var myChart = echarts.init(dom);
+		window.onresize = myChart.resize;  // 适应屏幕放大缩小
+		function randomData() {
+			now = new Date(+now + oneDay);
+			value = value + Math.random() * 21 - 10;
+			return {
+				name: now.toString(),
+				value: [
+					[now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/'),
+					Math.round(value)
+				]
+			};
+		}
+
+		var data = [];
+		var now = +new Date(1997, 9, 3);
+		var oneDay = 24 * 3600 * 1000;
+		var value = Math.random() * 1000;
+		for (var i = 0; i < 1000; i++) {
+			data.push(randomData());
+		}
+
+		option = {
+			title: {  //标题的样式
+				text: '实时数据图',
+				itemGap: 30,
+				textStyle: {
+					color: '#4285f4',
+					fontFamily: '微软雅黑',
+				}
+			},
+			tooltip: {
+				trigger: 'axis',
+				formatter: function (params) {
+					params = params[0];
+					var date = new Date(params.name);
+					return date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear() + ' : ' + params.value[1];
+				},
+				axisPointer: {
+					animation: false
+				}
+			},
+			xAxis: {
+				type: 'time',
+				splitLine: {
+					show: false
+				}
+			},
+			yAxis: [
+			{
+				type: 'value',
+				boundaryGap: [0, '100%'],
+				splitLine: {
+					show: false
+				},
+			}],
+			series: [{
+				name: '模拟数据',
+				type: 'line',
+				showSymbol: false,
+				hoverAnimation: false,
+				data: data
+			}]
+		};
+        myChart.setOption(option);
+		setInterval(function () {
+			for (var i = 0; i < 5; i++) {
+				data.shift();
+				data.push(randomData());
+			}
+			myChart.setOption({
+				series: [{
+					data: data
+				}]
+			});
+		}, 1000);
+	</script>
 	<!-- ================== END PAGE LEVEL JS ================== -->
 </body>
 </html>

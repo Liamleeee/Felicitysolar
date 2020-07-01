@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<title>Host Computer</title>
+	<title>Felicitysolar</title>
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
 	<meta content="" name="description" />
 	<meta content="" name="author" />
@@ -30,14 +30,14 @@
 	<!-- end #page-loader -->
 	
 	<!-- begin #page-container -->
-	<div id="page-container" class="fade page-header-fixed page-sidebar-fixed page-with-wide-sidebar">
+	<div id="page-container" class="fade page-header-fixed page-sidebar-fixed page-with-wide-sidebar page-with-top-menu">
 		<!-- begin #header -->
 		<div id="header" class="header navbar-default">
 			<!-- begin navbar-header -->
 			<div class="navbar-header">
-				<a href="index.html" class="navbar-brand">
+				<a href="#" class="navbar-brand">
 					<div class="image">
-						<img src="../assets/img/logo/felicitysolar.png" alt="" style="width:150px;height:auto"/>
+						<img src="../assets/img/logo/Felicitysolar_icon.png" alt="" style="width:150px;height:auto"/>
 					</div>
 				</a>
 				<button type="button" class="navbar-toggle pt-0 pb-0 mr-0" data-toggle="collapse" data-target="#top-navbar">
@@ -56,48 +56,7 @@
 
 			<!-- begin navbar-collapse -->
 			<div class="collapse navbar-collapse" id="top-navbar">
-				<ul class="nav navbar-nav">
-					<li class="dropdown dropdown-lg">
-						<a href="#" class="dropdown-toggle d-flex align-items-center" data-toggle="dropdown"><i class="fas fa-window-restore fa-fw mr-1"></i> Add product <b class="caret ml-1"></b></a>
-						<div class="dropdown-menu dropdown-menu-lg">
-							<div class="row">
-								<div class="col-lg-4 col-md-4">
-									<div class="f-w-700 text-inverse mb-2">UI Kits</div>
-									<div class="row m-b-20">
-									</div>
-								</div>
-								<div class="col-lg-4 col-md-4">
-									<div class="f-w-700 text-inverse mb-2">Page Options <span class="label label-pink ml-1">11</span></div>
-									<div class="row m-b-20">
-									</div>
-								</div>
-								<div class="col-lg-4 col-md-4">
-									<div class="f-w-700 text-inverse mb-2">Paragraph</div>
-									<p>
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis libero purus, fermentum at libero convallis, auctor dignissim mauris. Nunc laoreet pellentesque turpis sodales ornare. Nunc vestibulum nunc lorem, at sodales velit malesuada congue. Nam est tortor, tincidunt sit amet eros vitae, aliquam finibus mauris.
-									</p>
-									<p>
-										Fusce ac ligula laoreet ante dapibus mattis. Nam auctor vulputate aliquam. Suspendisse efficitur, felis sed elementum eleifend, ipsum tellus sodales nisi, ut condimentum nisi sem in nibh. Phasellus suscipit vulputate purus at venenatis. Quisque luctus tincidunt tempor.
-									</p>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle d-flex align-items-center" data-toggle="dropdown">
-							<i class="fa fa-cog fa-fw mr-1"></i> Settings <b class="caret ml-1"></b>
-						</a>
-						<div class="dropdown-menu">
-							<a href="javascript:;" class="dropdown-item">Action</a>
-							<a href="javascript:;" class="dropdown-item">Another action</a>
-							<a href="javascript:;" class="dropdown-item">Something else here</a>
-							<div class="dropdown-divider"></div>
-							<a href="javascript:;" class="dropdown-item">Separated link</a>
-							<div class="dropdown-divider"></div>
-							<a href="javascript:;" class="dropdown-item">One more separated link</a>
-						</div>
-					</li>
-				</ul>
+
 			</div>
 			<!-- end navbar-collapse -->
 			
@@ -201,7 +160,6 @@
 									<span>Bettery monitor BMV-702</span>
 								</div>
 							</div>
-
 						</a>
 					</li>
 					<!-- begin sidebar minify button -->
@@ -214,6 +172,47 @@
 		<div class="sidebar-bg"></div>
 		<!-- end #sidebar -->
 		
+		<!-- begin #top-menu -->
+		<div id="top-menu" class="top-menu">
+			<!-- begin nav -->
+			<ul class="nav">
+				<li class="has-sub">
+					<a href="device_list.html">
+						<i class="fas fa-window-restore fa-fw mr-1"></i>
+						<span>Add device</span>
+					</a>
+				</li>
+				<li class="has-sub active">
+					<a href="BMV-702.html">
+						<i class="material-icons">inbox</i>
+						<span>Device</span>
+					</a>
+				</li>
+				<li class="has-sub">
+					<a href="javascript:;">
+						<i class="material-icons">settings</i>
+						<span>Settings</span>
+						<b class="caret"></b>
+					</a>
+				</li>
+				<li class="has-sub">
+					<a href="javascript:;">
+						<i class="material-icons">help</i>
+						<span>Help</span>
+						<b class="caret"></b>
+					</a>
+				</li>
+				<li class="menu-control menu-control-left">
+					<a href="javascript:;" data-click="prev-menu"><i class="fa fa-angle-left"></i></a>
+				</li>
+				<li class="menu-control menu-control-right">
+					<a href="javascript:;" data-click="next-menu"><i class="fa fa-angle-right"></i></a>
+				</li>
+			</ul>
+			<!-- end nav -->
+		</div>
+		<!-- end #top-menu -->
+
 		<!-- begin #content -->
 		<div id="content" class="content">
 			<!-- begin card -->
@@ -418,31 +417,31 @@
 												</thead>
 												<tbody>
 													<tr>
-														<td>battery capacity</td>
-														<td class="text-right"><a href="#modal-dialog" class="btn btn-sm btn-success" data-toggle="modal">200Ah</a></td>													
+														<td>Battery capacity</td>
+														<td class="text-right"><a href="#modal-Battery-capacity" class="btn btn-sm btn-success" data-toggle="modal">200Ah</a></td>													
 													<tr>
 														<td>Charged voltage</td>
-														<td class="text-right"><a href="#modal-dialog" class="btn btn-sm btn-success" data-toggle="modal">13.5</a></td>													<tr>
+														<td class="text-right"><a href="#modal-Charged-voltage" class="btn btn-sm btn-success" data-toggle="modal">13.5</a></td>													<tr>
 													</tr>
 													<tr>
 														<td>Discharge standard</td>
-														<td class="text-right"><a href="#modal-dialog" class="btn btn-sm btn-success" data-toggle="modal">50%</a></td>													<tr>
+														<td class="text-right"><a href="#modal-Discharge-standard" class="btn btn-sm btn-success" data-toggle="modal">50%</a></td>													<tr>
 													</tr>
 													<tr>
 														<td>Tail current</td>
-														<td class="text-right"><a href="#modal-dialog" class="btn btn-sm btn-success" data-toggle="modal">4.00%</a></td>	
+														<td class="text-right"><a href="#modal-Tail-current" class="btn btn-sm btn-success" data-toggle="modal">4.00%</a></td>	
 													</tr>
 													<tr>
 														<td>Peukert factor</td>
-														<td class="text-right"><a href="#modal-dialog" class="btn btn-sm btn-success" data-toggle="modal">1.25</a></td>	
+														<td class="text-right"><a href="#modal-Peukert-factor" class="btn btn-sm btn-success" data-toggle="modal">1.25</a></td>	
 													</tr>
 													<tr>
 														<td>Available average time</td>
-														<td class="text-right"><a href="#modal-dialog" class="btn btn-sm btn-success" data-toggle="modal">3m</a></td>	
+														<td class="text-right"><a href="#modal-Available-average-time" class="btn btn-sm btn-success" data-toggle="modal">3m</a></td>	
 													</tr>
 													<tr>
 														<td>Current threshold</td>
-														<td class="text-right"><a href="#modal-dialog" class="btn btn-sm btn-success" data-toggle="modal">0.10A</a></td>	
+														<td class="text-right"><a href="#modal-Current-threshold" class="btn btn-sm btn-success" data-toggle="modal">0.10A</a></td>	
 													</tr>
 												</tbody>
 											</table>
@@ -460,91 +459,157 @@
 													</tr>
 													<tr>
 														<td>Charging Status</td>
-														<td class="text-right"><a href="#modal-dialog" class="btn btn-sm btn-success" data-toggle="modal">85%</a></td>
+														<td class="text-right"><a href="#modal-Charging-Status" class="btn btn-sm btn-success" data-toggle="modal">85%</a></td>
 													</tr>
 													<tr>
 														<td>Synchronize soc to 100%</td>
-														<td class="text-right"><a href="#modal-dialog" class="btn btn-sm btn-indigo" data-toggle="modal">Synchronize</a></td>
-													</tr>
-													<tr>
-														<td>Zero current calibration</td>
-														<td class="text-right"><a href="#modal-dialog" class="btn btn-sm btn-indigo" data-toggle="modal">Synchronize</a></td>
+														<td class="text-right">
+															<a href="javascript:;" data-click="swal-info" class="btn btn-info">Synchronize</a>
+														</td>
 													</tr>
 												</tbody>
 											</table>
-											<!-- #modal-content -->
-											<div class="modal fade" id="modal-dialog">
+											<!-- modal-content -->
+											<!-- #modal-Battery-capacity -->
+											<div class="modal fade" id="modal-Battery-capacity">
 												<div class="modal-dialog">
 													<div class="modal-content">
 														<div class="modal-header">
-															<h4 class="modal-title">Modal Dialog</h4>
+															<h4 class="modal-title text-green-darker">Battery capacity</h4>
 															<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 														</div>
 														<div class="modal-body">
-															<p>
-																Modal body content here...
-															</p>
+															<input class="form-control form-control-lg width-200" type="text" placeholder="(Ah)"  style="margin:0 auto;text-align:center;"/>
 														</div>
 														<div class="modal-footer">
 															<a href="javascript:;" class="btn btn-white" data-dismiss="modal">Close</a>
-															<a href="javascript:;" class="btn btn-success">Action</a>
+															<a href="javascript:;" class="btn btn-success">Confirm</a>
 														</div>
 													</div>
 												</div>
 											</div>
-											<!-- #modal-without-animation -->
-											<div class="modal" id="modal-without-animation">
+											<!-- #modal-Charged-voltage -->
+											<div class="modal fade" id="modal-Charged-voltage">
 												<div class="modal-dialog">
 													<div class="modal-content">
 														<div class="modal-header">
-															<h4 class="modal-title">Modal Without Animation</h4>
+															<h4 class="modal-title text-green-darker">Charged voltage</h4>
 															<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 														</div>
 														<div class="modal-body">
-															Modal body content here...
+															<input class="form-control form-control-lg width-200" type="text" placeholder="(V)"  style="margin:0 auto;text-align:center;"/>
 														</div>
 														<div class="modal-footer">
 															<a href="javascript:;" class="btn btn-white" data-dismiss="modal">Close</a>
+															<a href="javascript:;" class="btn btn-success">Confirm</a>
 														</div>
 													</div>
 												</div>
 											</div>
-											<!-- #modal-message -->
-											<div class="modal modal-message fade" id="modal-message">
+											<!-- #modal-Discharge-standard -->
+											<div class="modal fade" id="modal-Discharge-standard">
 												<div class="modal-dialog">
 													<div class="modal-content">
 														<div class="modal-header">
-															<h4 class="modal-title">Modal Message Header</h4>
+															<h4 class="modal-title text-green-darker">Discharge standar</h4>
 															<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 														</div>
 														<div class="modal-body">
-															<p>Text in a modal</p>
-															<p>Do you want to turn on location services so GPS can use your location ?</p>
+															<input class="form-control form-control-lg width-200" type="text" placeholder="(%)"  style="margin:0 auto;text-align:center;"/>
 														</div>
 														<div class="modal-footer">
 															<a href="javascript:;" class="btn btn-white" data-dismiss="modal">Close</a>
-															<a href="javascript:;" class="btn btn-primary">Save Changes</a>
+															<a href="javascript:;" class="btn btn-success">Confirm</a>
 														</div>
 													</div>
 												</div>
 											</div>
-											<!-- #modal-alert -->
-											<div class="modal fade" id="modal-alert">
+											<!-- #modal-Tail-current -->
+											<div class="modal fade" id="modal-Tail-current">
 												<div class="modal-dialog">
 													<div class="modal-content">
 														<div class="modal-header">
-															<h4 class="modal-title">Alert Header</h4>
+															<h4 class="modal-title text-green-darker">Tail-current</h4>
 															<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 														</div>
 														<div class="modal-body">
-															<div class="alert alert-danger m-b-0">
-																<h5><i class="fa fa-info-circle"></i> Alert Header</h5>
-																<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-															</div>
+															<input class="form-control form-control-lg width-200" type="text" placeholder="(%)"  style="margin:0 auto;text-align:center;"/>
 														</div>
 														<div class="modal-footer">
 															<a href="javascript:;" class="btn btn-white" data-dismiss="modal">Close</a>
-															<a href="javascript:;" class="btn btn-danger" data-dismiss="modal">Action</a>
+															<a href="javascript:;" class="btn btn-success">Confirm</a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- #modal-Peukert-factor -->
+											<div class="modal fade" id="modal-Peukert-factor">
+												<div class="modal-dialog">
+													<div class="modal-content">
+														<div class="modal-header">
+															<h4 class="modal-title text-green-darker">Peukert-factor</h4>
+															<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+														</div>
+														<div class="modal-body">
+															<input class="form-control form-control-lg width-200" type="text" placeholder=""  style="margin:0 auto;text-align:center;"/>
+														</div>
+														<div class="modal-footer">
+															<a href="javascript:;" class="btn btn-white" data-dismiss="modal">Close</a>
+															<a href="javascript:;" class="btn btn-success">Confirm</a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- #modal-Available-average-time -->
+											<div class="modal fade" id="modal-Available-average-time">
+												<div class="modal-dialog">
+													<div class="modal-content">
+														<div class="modal-header">
+															<h4 class="modal-title text-green-darker">Available average time</h4>
+															<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+														</div>
+														<div class="modal-body">
+															<input class="form-control form-control-lg width-200" type="text" placeholder="(min)"  style="margin:0 auto;text-align:center;"/>
+														</div>
+														<div class="modal-footer">
+															<a href="javascript:;" class="btn btn-white" data-dismiss="modal">Close</a>
+															<a href="javascript:;" class="btn btn-success">Confirm</a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- #modal-Current-threshold -->
+											<div class="modal fade" id="modal-Current-threshold">
+												<div class="modal-dialog">
+													<div class="modal-content">
+														<div class="modal-header">
+															<h4 class="modal-title text-green-darker">Current threshold </h4>
+															<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+														</div>
+														<div class="modal-body">
+															<input class="form-control form-control-lg width-200" type="text" placeholder="(A)"  style="margin:0 auto;text-align:center;"/>
+														</div>
+														<div class="modal-footer">
+															<a href="javascript:;" class="btn btn-white" data-dismiss="modal">Close</a>
+															<a href="javascript:;" class="btn btn-success">Confirm</a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- #modal-Current-threshold -->
+											<div class="modal fade" id="modal-Charging-Status">
+												<div class="modal-dialog">
+													<div class="modal-content">
+														<div class="modal-header">
+															<h4 class="modal-title text-green-darker">Charging Status</h4>
+															<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+														</div>
+														<div class="modal-body">
+															<input class="form-control form-control-lg width-200" type="text" placeholder="(%)"  style="margin:0 auto;text-align:center;"/>
+														</div>
+														<div class="modal-footer">
+															<a href="javascript:;" class="btn btn-white" data-dismiss="modal">Close</a>
+															<a href="javascript:;" class="btn btn-success">Confirm</a>
 														</div>
 													</div>
 												</div>
@@ -593,6 +658,7 @@
 	<!-- ================== Notifications ================== -->
 	<script src="../assets/plugins/gritter/js/jquery.gritter.js"></script>
 	<script src="../assets/plugins/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="../assets/js/demo/ui-modal-notification.demo.js"></script>
 	<!-- ================== Switch ================== -->	
 	<script src="../assets/plugins/switchery/switchery.min.js"></script>
 	<script src="../assets/plugins/abpetkov-powerange/dist/powerange.min.js"></script>
@@ -721,10 +787,34 @@
 					animation: false
 				}
 			},
+			toolbox: {
+				show: true,
+				feature: {
+					dataZoom: {
+						yAxisIndex: 'none'
+					},
+					dataView: {readOnly: false},
+					magicType: {type: ['line', 'bar']},
+					restore: {},
+					saveAsImage: {}
+				}
+			},
+			legend: {  //它是图形最顶层的三个小方块每一个颜色所代表的东西
+				// x : '66%',
+				// y : '15%',
+				data: ['data1','data2']  //数据，dataname=['练习量','占用率']，数组形式
+			},
+			grid: {
+				left: '2%',
+				right: '4%',
+				bottom: '14%',
+				top: '16%',
+				containLabel: true
+			},
 			xAxis: {
 				type: 'time',
 				splitLine: {
-					show: false
+					show: true
 				}
 			},
 			yAxis: [
@@ -732,15 +822,26 @@
 				type: 'value',
 				boundaryGap: [0, '100%'],
 				splitLine: {
-					show: false
+					show: true
 				},
 			}],
 			series: [{
 				name: '模拟数据',
 				type: 'line',
 				showSymbol: false,
-				hoverAnimation: false,
-				data: data
+				hoverAnimation: true,
+				data: data,
+				markPoint: {
+							data: [
+								{type: 'max', name: '最大值'},
+								{type: 'min', name: '最小值'}
+							]},
+
+				markLine: {
+					data: [
+						{type: 'average', name: '平均值'}
+					]
+				}
 			}]
 		};
         myChart.setOption(option);

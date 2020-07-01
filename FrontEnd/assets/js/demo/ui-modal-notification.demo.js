@@ -118,8 +118,8 @@ var handleSweetNotification = function() {
 	$('[data-click="swal-primary"]').click(function(e) {
 		e.preventDefault();
 		swal({
-			title: 'Are you sure?',
-			text: 'You will not be able to recover this imaginary file!',
+			title: 'Set battery soc to 100%?',
+			text: 'You will not be able to recover this operating!',
 			icon: 'info',
 			buttons: {
 				cancel: {
@@ -143,8 +143,8 @@ var handleSweetNotification = function() {
 	$('[data-click="swal-info"]').click(function(e) {
 		e.preventDefault();
 		swal({
-			title: 'Are you sure?',
-			text: 'You will not be able to recover this imaginary file!',
+			title: 'Set battery soc to 100%?',
+			text: 'You will not be able to recover this operating!',
 			icon: 'info',
 			buttons: {
 				cancel: {
@@ -155,7 +155,7 @@ var handleSweetNotification = function() {
 					closeModal: true,
 				},
 				confirm: {
-					text: 'Info',
+					text: 'Confirm',
 					value: true,
 					visible: true,
 					className: 'btn btn-info',

@@ -1,22 +1,31 @@
 import sys
-from PyQt5.QtCore import *
+import time
+import os
 from PyQt5.QtGui import *
+from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
+from PyQt5.QtWebChannel import *
 from PyQt5.QtWebEngineWidgets import *
 
+from WebChannels import DeviceListChannel
 
-class MainWindow(QMainWindow):
-    def __init__(self):
+class MainWindow(QWebEngineView):   
+    """主窗口"""
+    def __init__(self, main_entry):
         super(MainWindow, self).__init__()
-        self.setWindowTitle('Host Computer')  # 窗口标题
-        self.setGeometry(5,30,1355,730)  # 窗口的大小和位置设置
-        self.browser=QWebEngineView()    # 以Web引擎方式加载外部的web界面
-        
-        self.browser.load(QUrl('file:///FrontEnd/templates/ProjectInfo.html'))
-        self.setCentralWidget(self.browser)
+        self.setWindowState(Qt.WindowMaximized) # 设置窗口最大化
+        self.setWindowTitle('Felicitysolar')  # 窗口标题
+
+        self.__channel = QWebChannel(self.page())
+        self.__my_object = DeviceListChannel(self)
+        self.__channel.registerObject('DeviceList',self.__my_object)
+        self.page().load(QUrl.fromLocalFile(main_entry))
+
 
 if __name__ == '__main__':
-    app=QApplication(sys.argv)
-    win=MainWindow()
-    win.show()
-    app.exit(app.exec_())
+    app = QApplication(sys.argv)
+    main_entry = os.path.realpath(os.path.dirname(__file__) + "/FrontEnd/templates/device_list.html") 
+    w = MainWindow(main_entry)
+    w.resize(400,500)
+    w.show()
+    app.exec_()

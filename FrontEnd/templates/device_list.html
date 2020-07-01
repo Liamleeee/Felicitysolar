@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Felicitysolar</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	
+	<!-- ================== BEGIN BASE CSS STYLE ================== -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<link href="../assets/css/google/app.min.css" rel="stylesheet" />
+	<!-- ================== END BASE CSS STYLE ================== -->
+	
+	<!-- ================== BEGIN PAGE LEVEL STYLE ================== -->
+	<link href="../assets/plugins/smartwizard/dist/css/smart_wizard.css" rel="stylesheet" />
+  	<link href="../assets/plugins/flag-icon-css/css/flag-icon.min.css" rel="stylesheet" />	
+	<!-- ================== END PAGE LEVEL STYLE ================== -->
+
+    <script>
+        window.onload = function () {
+            new QWebChannel(qt.webChannelTransport, function (channel) {
+               	var my_object = channel.objects.DeviceList;    //把对象赋值到JS中
+
+                DeviceList.myHello(function (res) {
+                    alert(res)
+                })
+            });
+        }
+    </script>
+</head>
+<body>
+	<!-- begin #page-container -->
+	<div id="page-container" class="page-container fade page-without-sidebar page-header-fixed page-with-top-menu">
+		<!-- begin #header -->
+		<div id="header" class="header navbar-default">
+			<!-- begin navbar-header -->
+			<div class="navbar-header">
+				<a href="index.html" class="navbar-brand">
+					<div class="image">
+						<img src="../assets/img/logo/Felicitysolar_icon.png" alt="" style="width:150px;height:auto"/>
+					</div>
+				</a>
+				<button type="button" class="navbar-toggle pt-0 pb-0 mr-0" data-toggle="collapse" data-target="#top-navbar">
+					<span class="fa-stack fa-lg text-inverse">
+						<i class="far fa-square fa-stack-2x"></i>
+						<i class="fa fa-cog fa-stack-1x"></i>
+					</span>
+				</button>
+				<button type="button" class="navbar-toggle" data-click="sidebar-toggled">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<!-- end navbar-header -->
+
+			<!-- begin navbar-collapse -->
+			<div class="collapse navbar-collapse" id="top-navbar">
+				<ul class="nav navbar-nav">
+					<li class="dropdown dropdown-lg">
+						<a href="#" class="dropdown-toggle d-flex align-items-center" data-toggle="dropdown"><i class="fas fa-window-restore fa-fw mr-1"></i> Add product <b class="caret ml-1"></b></a>
+						<div class="dropdown-menu dropdown-menu-lg">
+							<div class="row">
+								<div class="col-lg-4 col-md-4">
+									<div class="f-w-700 text-inverse mb-2">UI Kits</div>
+									<div class="row m-b-20">
+									</div>
+								</div>
+								<div class="col-lg-4 col-md-4">
+									<div class="f-w-700 text-inverse mb-2">Page Options <span class="label label-pink ml-1">11</span></div>
+									<div class="row m-b-20">
+									</div>
+								</div>
+								<div class="col-lg-4 col-md-4">
+									<div class="f-w-700 text-inverse mb-2">Paragraph</div>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis libero purus, fermentum at libero convallis, auctor dignissim mauris. Nunc laoreet pellentesque turpis sodales ornare. Nunc vestibulum nunc lorem, at sodales velit malesuada congue. Nam est tortor, tincidunt sit amet eros vitae, aliquam finibus mauris.
+									</p>
+									<p>
+										Fusce ac ligula laoreet ante dapibus mattis. Nam auctor vulputate aliquam. Suspendisse efficitur, felis sed elementum eleifend, ipsum tellus sodales nisi, ut condimentum nisi sem in nibh. Phasellus suscipit vulputate purus at venenatis. Quisque luctus tincidunt tempor.
+									</p>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle d-flex align-items-center" data-toggle="dropdown">
+							<i class="fa fa-cog fa-fw mr-1"></i> Settings <b class="caret ml-1"></b>
+						</a>
+						<div class="dropdown-menu">
+							<a href="javascript:;" class="dropdown-item">Action</a>
+							<a href="javascript:;" class="dropdown-item">Another action</a>
+							<a href="javascript:;" class="dropdown-item">Something else here</a>
+							<div class="dropdown-divider"></div>
+							<a href="javascript:;" class="dropdown-item">Separated link</a>
+							<div class="dropdown-divider"></div>
+							<a href="javascript:;" class="dropdown-item">One more separated link</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- end navbar-collapse -->
+			
+			<!-- end navbar-header --><!-- begin header-nav -->
+			<ul class="navbar-nav d-flex flex-grow-1">
+				<li class="navbar-form flex-grow-1">
+					<form action="" method="POST" name="search">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder='Try searching "Users Today"' />
+							<button type="submit" class="btn btn-search"><i class="fa fa-search"></i></button>
+						</div>
+					</form>
+				</li>
+				<li class="dropdown">
+					<a href="#" data-toggle="dropdown" class="dropdown-toggle">
+						<i class="fa fa-bell"></i>
+						<span class="label label-primary">5</span>
+					</a>
+					<div class="dropdown-menu media-list dropdown-menu-right">
+						<div class="dropdown-header">Notifications (5)</div>
+						<a href="javascript:;" class="dropdown-item media">
+							<div class="media-left">
+								<i class="fa fa-bug media-object bg-silver-darker"></i>
+							</div>
+							<div class="media-body">
+								<h6 class="media-heading">Server Error Reports <i class="fa fa-exclamation-circle text-danger"></i></h6>
+								<div class="text-muted f-s-12">3 minutes ago</div>
+							</div>
+						</a>
+						<a href="javascript:;" class="dropdown-item media">
+							<div class="media-left">
+								<i class="fa fa-plus media-object bg-silver-darker"></i>
+							</div>
+							<div class="media-body">
+								<h6 class="media-heading"> New User Registered</h6>
+								<div class="text-muted f-s-12">1 hour ago</div>
+							</div>
+						</a>
+						<a href="javascript:;" class="dropdown-item media">
+							<div class="media-left">
+								<i class="fa fa-envelope media-object bg-silver-darker"></i>
+							</div>
+							<div class="media-body">
+								<h6 class="media-heading">BMV-702 Warning<i class="fa fa-exclamation-circle text-danger"></i></h6>
+								<div class="text-muted f-s-12">2 hour ago</div>
+							</div>
+						</a>
+						<div class="dropdown-footer text-center">
+							<a href="javascript:;">View more</a>
+						</div>
+					</div>
+				</li>
+				<li class="dropdown navbar-language">
+					<a href="#" class="dropdown-toggle pr-1 pl-1 pr-sm-3 pl-sm-3" data-toggle="dropdown">
+						<span class="flag-icon flag-icon-us" title="us"></span>
+						<span class="name d-none d-sm-inline">EN</span> <b class="caret"></b>
+					</a>
+					<div class="dropdown-menu">
+						<a href="javascript:;" class="dropdown-item"><span class="flag-icon flag-icon-us" title="us"></span> English</a>
+						<a href="javascript:;" class="dropdown-item"><span class="flag-icon flag-icon-cn" title="cn"></span> Chinese</a>
+					</div>
+				</li>
+				<li class="dropdown navbar-user">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<img src="../assets/img/user/user-13.jpg" alt="" /> 
+						<span class="d-none d-md-inline">Admin</span> <b class="caret"></b>
+					</a>
+					<div class="dropdown-menu dropdown-menu-right">
+						<a href="javascript:;" class="dropdown-item">Edit Profile</a>
+						<a href="javascript:;" class="dropdown-item"><span class="badge badge-danger pull-right">2</span> Inbox</a>
+						<a href="javascript:;" class="dropdown-item">Calendar</a>
+						<a href="javascript:;" class="dropdown-item">Setting</a>
+						<div class="dropdown-divider"></div>
+						<a href="javascript:;" class="dropdown-item">Log Out</a>
+					</div>
+				</li>
+			</ul>
+			<!-- end header-nav -->
+		</div>
+		<!-- end #header -->
+		
+		<!-- begin #top-menu -->
+		<div id="top-menu" class="top-menu">
+			<!-- begin nav -->
+			<ul class="nav">
+				<li class="has-sub active">
+					<a href="javascript:;">
+						<i class="fas fa-window-restore fa-fw mr-1"></i>
+						<span>Add device</span>
+					</a>
+				</li>
+				<li class="has-sub">
+					<a href="BMV-702.html">
+						<i class="material-icons">inbox</i>
+						<span>Device</span>
+					</a>
+				</li>
+				<li class="has-sub">
+					<a href="javascript:;">
+						<i class="material-icons">settings</i>
+						<span>Settings</span>
+					</a>
+				</li>
+				<li class="has-sub">
+					<a href="javascript:;">
+						<i class="material-icons">help</i>
+						<span>Help</span>
+					</a>
+				</li>
+				<li class="menu-control menu-control-left">
+					<a href="javascript:;" data-click="prev-menu"><i class="fa fa-angle-left"></i></a>
+				</li>
+				<li class="menu-control menu-control-right">
+					<a href="javascript:;" data-click="next-menu"><i class="fa fa-angle-right"></i></a>
+				</li>
+			</ul>
+			<!-- end nav -->
+		</div>
+		<!-- end #top-menu -->
+
+		<!-- begin #content -->
+		<div id="content" class="content">
+			<!-- begin page-header -->
+			<h1 class="page-header">Add device </h1>
+			<!-- end page-header -->
+			<!-- begin wizard-form -->
+			<form action="/" method="POST" class="form-control-with-bg">
+				<!-- begin wizard -->
+				<div id="wizard">
+					<!-- begin wizard-step -->
+					<ul>
+						<li>
+							<a href="#step-1">
+								<span class="number">1</span> 
+								<span class="info">
+									Select serial device
+									<small>Choose your device from all serial connections</small>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="#step-2">
+								<span class="number">2</span> 
+								<span class="info">
+									Baud rate setting
+									<small>Set the baud rate and serial port address</small>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="#step-3">
+								<span class="number">3</span>
+								<span class="info">
+									Device choose
+									<small>Choose your device from devices list </small>
+								</span>
+							</a>
+						</li>
+						<li>
+							<a href="#step-4">
+								<span class="number">4</span> 
+								<span class="info">
+									Completed
+									<small>Complete adding device</small>
+								</span>
+							</a>
+						</li>
+					</ul>
+					<!-- end wizard-step -->
+					<!-- begin wizard-content -->
+					<div>
+						<!-- begin step-1 -->
+						<div id="step-1">
+							<!-- begin fieldset -->
+							<fieldset>
+								<!-- begin row -->
+								<div class="row">
+									<!-- begin col-8 -->
+									<div class="col-xl-8 offset-xl-2">
+										<legend class="no-border f-w-700 p-b-0 m-t-0 m-b-20 f-s-16 text-inverse">Select serial device</legend>
+										<!-- begin form-group row -->
+										<div class="form-group row m-b-10">
+											<label class="col-lg-3 text-lg-right col-form-label">Serial device</label>
+											<div class="col-lg-9 col-xl-6">
+												<select multiple class="form-control" id="serialSelect">
+													<option>id: 0 COM6 - USB Serial Port (COM6)</option>
+													<option>id: 1 COM7 - USB Serial Port (COM7)</option>
+													<option>id: 2 COM8 - USB Serial Port (COM8)</option>
+													<option>id: 3 COM9 - USB Serial Port (COM9)</option>
+												</select>
+											</div>
+										</div>
+										<!-- end form-group row -->
+									</div>
+									<!-- end col-8 -->
+								</div>
+								<!-- end row -->
+							</fieldset>
+							<!-- end fieldset -->
+						</div>
+						<!-- end step-1 -->
+						<!-- begin step-2 -->
+						<div id="step-2">
+							<!-- begin fieldset -->
+							<fieldset>
+								<!-- begin row -->
+								<div class="row">
+									<!-- begin col-8 -->
+									<div class="col-xl-8 offset-xl-2">
+										<legend class="no-border f-w-700 p-b-0 m-t-0 m-b-20 f-s-16 text-inverse">Set the baud rate and serial port address</legend>
+										<!-- begin form-group row -->
+										<div class="form-group row m-b-10">
+											<label class="col-lg-3 text-lg-right col-form-label">Select baud rate</label>
+											<div class="col-lg-9 col-xl-6">
+												<select class="form-control form-control">
+													<option value="2400">2400</option>
+													<option value="4800">4800</option>
+													<option value="9600">9600</option>
+													<option value="14400">14400</option>
+													<option value="19200">19200</option>
+												</select>
+											</div>
+										</div>
+										<!-- end form-group row -->
+									</div>
+									<!-- end col-8 -->
+								</div>
+								<!-- end row -->
+							</fieldset>
+							<!-- end fieldset -->
+						</div>
+						<!-- end step-2 -->
+						<!-- begin step-3 -->
+						<div id="step-3">
+							<!-- begin fieldset -->
+							<fieldset>
+								<!-- begin row -->
+								<div class="row">
+									<!-- begin col-8 -->
+									<div class="col-xl-8 offset-xl-2">
+										<legend class="no-border f-w-700 p-b-0 m-t-0 m-b-20 f-s-16 text-inverse">Select your device</legend>
+										<!-- begin form-group row -->
+										<div class="form-group row m-b-10">
+											<label class="col-lg-3 text-lg-right col-form-label">Device list</label>
+											<div class="col-lg-9 col-xl-6">
+												<select multiple class="form-control">
+													<option>Bettery monitor BMV-702</option>
+													<option>Blue Smart Charge IP22 12|15 (1)</option>
+													<option>Inverter RS Smart 48/6000/80</option>
+													<option>Orion Smart 12|12V-18A isolate</option>
+												</select>											
+											</div>
+										</div>
+										<!-- end form-group row -->
+									</div>
+									<!-- end col-8 -->
+								</div>
+								<!-- end row -->
+							</fieldset>
+							<!-- end fieldset -->
+						</div>
+						<!-- end step-3 -->
+						<!-- begin step-4 -->
+						<div id="step-4">
+							<div class="jumbotron m-b-0 text-center">
+								<h2 class="display-4">Add device Successfully</h2>
+								<p class="lead mb-4">Everything is ready now<br />Come and check your device information</p>
+								<p><a href="BMV-702.html" class="btn btn-primary btn-lg">Proceed to Check Device Data</a></p>
+							</div>
+						</div>
+						<!-- end step-4 -->
+					</div>
+					<!-- end wizard-content -->
+				</div>
+				<!-- end wizard -->
+			</form>
+			<!-- end wizard-form -->
+		</div>
+		<!-- end #content -->
+		
+		<!-- begin scroll to top btn -->
+		<a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
+		<!-- end scroll to top btn -->
+	</div>
+	<!-- end page container -->
+	
+	<!-- ================== BEGIN BASE JS ================== -->
+	<script src="../assets/js/app.min.js"></script>
+	<script src="../assets/js/theme/google.min.js"></script>
+	<script src="../js/qwebchannel.js"></script>
+	<!-- ================== END BASE JS ================== -->
+	
+	<!-- ================== BEGIN PAGE LEVEL JS ================== -->
+	<script src="../assets/plugins/parsleyjs/dist/parsley.js"></script>
+	<script src="../assets/plugins/smartwizard/dist/js/jquery.smartWizard.js"></script>
+	<script src="../assets/js/demo/form-wizards.demo.js"></script>
+	<!-- ================== END PAGE LEVEL JS ================== -->
+
+	<script>
+		function AddSerialOption(serial, serialId){
+			var serialList = document.getElementById('serialSelect');
+			serialList.options.add(new Option(serial,serialId));
+		}
+	</script>
+</body>
+</html>
